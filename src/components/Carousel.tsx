@@ -1,17 +1,13 @@
 import React from "react";
-import "swiper/components/effect-fade/effect-fade.min.css";
-import "swiper/components/lazy/lazy.min.css";
-import SwiperCore, { A11y, Autoplay, EffectFade, Lazy } from "swiper/core";
+import "swiper/css";
+import "swiper/css/bundle";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper.min.css";
-
-SwiperCore.use([A11y, EffectFade, Autoplay, Lazy]);
 
 export interface PromoSlideshowContentProps {
   images: string[];
 }
 
-export function Carousel({ images }: PromoSlideshowContentProps) {
+export default function Carousel({ images }: PromoSlideshowContentProps) {
   return (
     <div className="relative max-w-full" style={{ width: "800px" }}>
       <Swiper
